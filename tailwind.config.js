@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: () => ({
+        mono: "url('/src/assets/mono.png')" ,
+        indigo: "'/src/assets/indigo.png'" ,
+        rpwp: "'/src/assets/RPWP.jpg'" ,
+      })
+    },
   },
   plugins: [],
 }
