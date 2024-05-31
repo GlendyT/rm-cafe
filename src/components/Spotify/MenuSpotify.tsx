@@ -1,28 +1,16 @@
 import MenuItemSpotify from "./MenuItemSpotify";
 import { menuItemsSpotify } from "../../data/db";
 
-
-type MenuSpotifyProps = {
-  showSpotify: boolean;
-  handleClick: (service: string) => void;
-};
-
-export default function MenuSpotify({
-  showSpotify,
-  handleClick,
-}: MenuSpotifyProps) {
+export default function MenuSpotify() {
   return (
     <>
-      <div className="p-5">
-        <h2 className="text-2xl font-black text-center ">MONO</h2>
-        <div
-          className="space-y-3 mt-4 grid justify-center bg-green-300 p-8"
-          onClick={() => handleClick("spotify")}
-        >
-          {showSpotify &&
-            menuItemsSpotify.map((item) => (
-              <MenuItemSpotify key={item.id} item={item} />
-            ))}
+      <div className="mt-6 pb-8 text-white">
+        <h2 className="text-2xl font-black text-center "></h2>
+        <div className="grid grid-cols-3 gap-2 max-sm:flex max-sm:flex-col max-2xl:grid-cols-2">
+          
+          {menuItemsSpotify.map((item) => (
+            <MenuItemSpotify key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </>
